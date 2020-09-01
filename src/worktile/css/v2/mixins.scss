@@ -1,0 +1,58 @@
+/* hover 的元素 样式 @include hover-rotate(180deg); */
+@mixin hover-rotate($deg) {
+    .hover-rotate {
+        transition: transform 300ms linear;
+    }
+    &:hover {
+        /* 要旋转的元素 */
+        .hover-rotate {
+            transform: rotate($deg);
+        }
+    }
+}
+
+@mixin font-medium() {
+    font-weight: 700;
+}
+
+@mixin font-regular() {
+    font-weight: 400;
+}
+
+@mixin margin-auto-xy-center() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@mixin table-only-border() {
+    border-collapse: collapse;
+    border-spacing: 0;
+    > tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+        > tr {
+            &:nth-of-type(odd) {
+                background-color: rgba(249, 250, 252, 0.5);
+                border-top: 0;
+                border-bottom: 0;
+            }
+            > td {
+                text-align: left;
+                padding: 2px 15px;
+                color: $gray-600;
+                font-size: 0.75rem;
+            }
+        }
+        &.center-cell > tr {
+            > td {
+                padding: 2px 0;
+                text-align: center;
+            }
+        }
+    }
+}

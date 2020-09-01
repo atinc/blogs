@@ -1,0 +1,452 @@
+
+.site-page {
+  min-height: 50vh;
+  &.show-header-shadow {
+    .site-header {
+      .box-header-shadow {
+        opacity: 1;
+        background-color: $white;
+      }
+    }
+  }
+}
+.site-header {
+  width: 100vw;
+  height: $header-height;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .box-header-shadow {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 40px -15px rgba(64, 90, 163, 0.15);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 300ms linear;
+    &.show-header-menu {
+      background-color: $white;
+      opacity: 1;
+    }
+  }
+  > .wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 1300px;
+    z-index: 2;
+    .logo-side {
+      box-sizing: border-box;
+      width: 158px;
+      height: 100%;
+      line-height: $header-height;
+      position: absolute;
+      top: 0;
+      left: 0;
+      > .pingcode-logo-box {
+        display: block;
+        width: 100%;
+        height: 32px;
+        overflow: hidden;
+        > .pingcode-logo-svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto;
+          cursor: pointer;
+          > .pingcode-logo {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          &.reverse-color > svg {
+            fill: #fff;
+          }
+        }
+        .arrow-down-circle-box {
+          width: 16px;
+          height: 70px;
+          position: absolute;
+          top: 0;
+          right: -28px;
+          cursor: pointer;
+          outline: none;
+          .hover-rotate {
+            transition: transform 300ms linear;
+          }
+          &.show-logo-nav {
+            /* 要旋转的元素 */
+            .hover-rotate {
+              transform: rotate(180deg);
+            }
+          }
+          .arrow-down-circle {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+          }
+          .logo-nav.show-logo-nav {
+            opacity: 1;
+            top: 61px;
+            > li:hover {
+              > a {
+                background: $hover-link-bg;
+              }
+            }
+          }
+        }
+      }
+      .logo-nav {
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 300ms linear;
+        padding: 27px 16px 0;
+        width: 242px;
+        height: 216px;
+        position: absolute;
+        top: -54000px;
+        left: 50%;
+        margin-left: -121px;
+        box-shadow: $card-shadow;
+        > li {
+          width: 100%;
+          height: 80px;
+          position: relative;
+          > a {
+            display: block;
+            width: 200px;
+            height: 100%;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 1;
+            .pingcode-logo,
+            .worktitle-logo {
+              width: 148px;
+              height: 31px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              z-index: 2;
+            }
+          }
+          &.switch-site-bg {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 242px;
+            height: 224px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 717px) {
+  .site-header {
+    height: $header-height-sm;
+    > .wrapper {
+      .logo-side {
+        width: 114px;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        > .logo-nav {
+          display: none;
+        }
+        > .pingcode-logo-box {
+          display: block;
+          height: 23px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          .arrow-down-circle-box {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.diy-nav {
+  padding-left: 303px;
+  // width: 100%;
+  height: 100%;
+  .header-menu {
+    display: none;
+  }
+  .menu-board {
+    width: 100%;
+    height: 100%;
+    .mobile-menu-board {
+      display: none;
+    }
+    .nav-side {
+      float: left;
+      height: 100%;
+      .nav-list {
+        height: 100%;
+        .nav-item {
+          float: left;
+          padding-top: 26px;
+          padding-right: 57px;
+          height: 100%;
+          @include hover-rotate(180deg);
+          &:first-child {
+            padding-right: 62px;
+          }
+
+          /*
+                    &.nav-lighter {
+                        > a {
+                            color: $primary;
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                    */
+          > a {
+            @include font-regular();
+            font-size: 14px;
+            text-align: left;
+            position: relative;
+            .arrow-down {
+              width: 12px;
+              height: 7px;
+              position: absolute;
+              top: 50%;
+              right: -22px;
+              margin-top: -2px;
+              color: $arrow-color;
+            }
+          }
+          > a {
+            color: $gray-800;
+          }
+          position: relative;
+          .header-nav-down {
+            opacity: 0;
+            transition: opacity 300ms linear;
+            padding: 31px 29px 40px 28px;
+            border-radius: 4px;
+            width: 520px;
+            height: 228px;
+            position: absolute;
+            top: -52000px;
+            left: -236px;
+            z-index: 2;
+            box-shadow: $card-shadow;
+            > li {
+              float: left;
+              position: relative;
+              z-index: 2;
+              &:nth-child(2n + 2) {
+                margin-right: 18px;
+                margin-bottom: 8px;
+              }
+              &:hover {
+                background-color: $hover-link-bg;
+              }
+              border-radius: 4px;
+              &.nav-down-bg {
+                position: absolute;
+                top: -12px;
+                left: 0;
+                width: 520px;
+                height: 240px;
+                z-index: 1;
+                background-color: transparent;
+              }
+              > a {
+                display: block;
+                padding-top: 18px;
+                padding-left: 16px;
+                width: 220px;
+                height: 81px;
+                .nav-down-item-svg {
+                  float: left;
+                  margin-right: 13px;
+                  .nav-down-svg {
+                    width: 44px;
+                    height: 45px;
+                  }
+                }
+                .nav-down-item-words {
+                  float: left;
+                  .nav-down-item-title {
+                    @include font-regular();
+                    font-size: 15px;
+                    color: #333;
+                    margin-bottom: 4px;
+                  }
+                  .nav-down-item-desc {
+                    @include font-regular();
+                    font-size: 12px;
+                    color: #aaa;
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            > a {
+              color: $primary;
+              .arrow-down {
+                color: $primary;
+              }
+            }
+            .header-nav-down {
+              top: 64px;
+              opacity: 1;
+            }
+          }
+          &.should-reverse-color {
+            > a {
+              color: $white;
+              .arrow-down {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .account {
+      float: right;
+      box-sizing: border-box;
+      height: 100%;
+      padding-top: 17px;
+      > a {
+        float: left;
+        font-size: 14px;
+      }
+      > .btn-outline {
+        margin-right: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 717px) {
+  .diy-nav {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    .header-menu {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .header-menu-icon,
+      .icon-close {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .icon-close {
+        width: 14px;
+        height: 14px;
+        display: none;
+      }
+      &--show-close {
+        .header-menu-icon {
+          display: none;
+        }
+        .icon-close {
+          display: inline;
+        }
+      }
+    }
+    .menu-board {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      background-color: $white;
+      position: fixed;
+      top: $header-height-sm;
+      left: 0;
+      opacity: 0;
+      transition: opacity 300ms linear, height 300ms linear;
+      .nav-side {
+        display: none;
+      }
+      &.show-header-menu {
+        opacity: 1;
+        height: calc(100vh - 50px);
+        box-shadow: inset 0 10px 40px -15px rgba(64, 90, 163, 0.1);
+      }
+      .account {
+        border-top: 1px solid #d5dbde;
+        padding-top: 0;
+        width: 100%;
+        height: 58px;
+        background-color: $footer-login-bg;
+        font-size: 14px;
+        letter-spacing: 0.52px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        > a {
+          flex: 1;
+          border: 0 none;
+          height: 100%;
+          line-height: 58px;
+          background-color: transparent;
+          color: #348fe4;
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 30px;
+          background-color: #d5dbde;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+      &--show {
+        opacity: 1;
+        height: calc(100vh - 50px);
+      }
+    }
+  }
+}

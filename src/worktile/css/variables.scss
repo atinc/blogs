@@ -43,3 +43,29 @@ $card-footer-padding-horizontal-l: 20px;
 
 $offcanvas-bar-background: $white;
 $offcanvas-bar-color-mode: dark;
+
+// ===========================
+
+$white: #fff;
+$black: #000;
+
+$colored-bg: #f9fafc;
+$arrow-color: #a5a5a5;
+$footer-login-bg: #fbfdfe;
+
+$checked-color: rgb(229, 233, 242);
+$checked-border-color: #3991e4;
+$hover-link-deep: #1e83e1;
+$hover-link-bg: #f4f9ff;
+$placeholder-color: #888a9e;
+
+$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB,
+  sans-serif;
+
+$card-shadow: 0 10px 24px 1px rgba(64, 90, 163, 0.13);
+$header-height: 70px;
+$header-height-sm: 50px;
+$content-width: 1160px;
+$secondary: $gray-500 !default;
+

@@ -1,0 +1,240 @@
+.site-footer {
+  .pc-footer-nav {
+    width: 100%;
+    height: 130px;
+    line-height: 130px;
+    position: relative;
+    .footer-pingcode-icon {
+      width: 32px;
+      height: 37px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      > svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .footer-nav-left,
+    .footer-nav-right {
+      width: 50%;
+      height: 100%;
+      @include font-regular();
+
+      font-size: 14px;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      .footer-nav-item {
+        height: 100%;
+        > a {
+          color: $gray-700;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+    .footer-nav-left {
+      padding-right: 20px;
+      left: 0;
+      .footer-nav-item {
+        float: right;
+        padding-right: 120px;
+      }
+    }
+    .footer-nav-right {
+      padding-left: 20px;
+      right: 0;
+      .footer-nav-item {
+        float: left;
+        padding-left: 120px;
+      }
+    }
+  }
+  .auth-right-footer-pc {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    @include font-regular();
+
+    font-size: 12px;
+    color: #aaa;
+    position: relative;
+    .split-words {
+      margin: 0 2px;
+      position: relative;
+      top: -1px;
+    }
+  }
+  .mobile-menu-board,
+  .pingcode-logo-footer,
+  .auth-right-footer {
+    display: none;
+  }
+}
+@media (max-width: 717px) {
+  .site-footer {
+    width: 100vw;
+    padding-top: 12px;
+    background-color: $white;
+    .pc-footer-nav,
+    .auth-right-footer-pc {
+      display: none;
+    }
+    .pingcode-logo-footer {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .pingcode-logo {
+        width: 104px;
+        height: 21px;
+      }
+    }
+    .auth-right-footer {
+      display: block;
+      margin-top: -20px;
+      width: 100%;
+      height: 60px;
+      overflow: hidden;
+      position: relative;
+      .auth-right {
+        width: 200%;
+        height: 104px;
+        overflow: hidden;
+        transform-origin: 50% 50% 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(0.5714);
+        .icp-info,
+        .copyright-info {
+          width: 100%;
+          line-height: 20px;
+          text-align: center;
+          @include font-regular();
+
+          font-size: 14px;
+          color: #aaa;
+          white-space: nowrap;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+        }
+        .icp-info {
+          top: calc(50% - 12px);
+        }
+        .copyright-info {
+          top: calc(50% + 12px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 717px) {
+  .mobile-menu-board {
+    display: block !important;
+    width: 100%;
+    padding-top: 20px;
+    > li {
+      padding: 0 20px;
+      width: 100%;
+      min-height: 59px;
+      line-height: 59px;
+      > a {
+        display: block;
+        border: 1px transparent solid;
+        border-top-color: #efefef;
+        width: 100%;
+        height: 100%;
+        @include font-regular();
+
+        font-size: 14px;
+        letter-spacing: 0.52px;
+        position: relative;
+        color: #333;
+        .icon-arrow-down {
+          width: 14px;
+          height: 8px;
+          position: absolute;
+          top: 26px;
+          right: 1px;
+          transition: transform 300ms linear;
+          color: #999;
+        }
+      }
+      &:last-child > a {
+        border-bottom-color: #efefef;
+      }
+      &.open-menu {
+        > a {
+          color: #348fe4;
+          border-bottom-color: #efefef;
+          .icon-arrow-down {
+            transform: rotate(180deg);
+            color: #348fe4;
+          }
+        }
+      }
+      .card-nav-board {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 300ms linear;
+        > li {
+          margin-top: 30px;
+          width: 100%;
+          height: 38px;
+          > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .card-svg-box {
+              width: 38px;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              > svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .card-right-words {
+              padding-left: 53px;
+              width: 100%;
+              height: 100%;
+              .card-tile {
+                line-height: 20px;
+                margin-bottom: 3px;
+                @include font-regular();
+
+                font-size: 14px;
+                color: #333;
+              }
+              .card-desc {
+                line-height: 14px;
+                @include font-regular();
+
+                font-size: 10px;
+                color: #aaa;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
