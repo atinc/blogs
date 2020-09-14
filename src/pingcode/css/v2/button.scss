@@ -1,0 +1,52 @@
+.btn {
+    display: inline-block;
+    padding: 0 26px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 1rem;
+    @include font-regular();
+
+    color: $white;
+    background-color: $primary;
+    border: 1px solid $primary;
+
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    &:hover,
+    &:focus {
+        background-color: $hover-link-deep;
+        color: $white;
+    }
+
+    &.btn-lg {
+    }
+
+    &.btn-sm {
+    }
+
+    &.btn-outline {
+        color: $primary;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $hover-link-deep;
+        }
+    }
+    &.should-reverse-color {
+        color: $primary;
+        background-color: $white;
+        &.btn-outline {
+            color: $white;
+            background-color: $primary;
+            border-color: $white;
+            &:hover,
+            &:focus {
+                background-color: $white;
+                color: $primary;
+            }
+        }
+    }
+}
