@@ -60,6 +60,10 @@ module.exports = {
           "./assets/mix-manifest.json"
         ),
       },
+      {
+        from: path.resolve(__dirname, CONFIG.srcRoot, "./assets"),
+        to: path.resolve(__dirname, CONFIG.outPutRoot, "./assets"),
+      },
     ]),
   ],
 };
