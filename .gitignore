@@ -1,8 +1,5 @@
 versions
 current
 .vscode
-config.development.json
-.ghost-cli
-.ghostpid
 node_modules
 content/logs
