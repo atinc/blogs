@@ -44,13 +44,14 @@ function getQueryVariable(variable) {
 
 function checkWxProgram() {
   const domManipulation = () => {
+    const doms = {
+      headerDom: document.querySelector(".site-header"),
+      placeholderDom: document.querySelector('.uk-sticky-placeholder'),
+    };
     if (checkList.checkUrlParams) {
       doms.headerDom.style.display = "none";
+      doms.placeholderDom.style.display = "none";
     }
-  };
-  const doms = {
-    headerDom: document.querySelector(".site-header"),
-    placeholderDome: document.querySelector(".uk-sticky-placeholder"),
   };
   const checkList = {
     checkUrlParams: getQueryVariable("access_environment") && getQueryVariable("access_environment") === "wx_program",
