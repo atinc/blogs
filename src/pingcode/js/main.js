@@ -30,8 +30,50 @@ function logoHoverSwitchPanel() {
   };
 }
 
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  }
+  return false;
+}
+
+function checkWxProgram() {
+  const domManipulation = () => {
+    if (checkList.checkUrlParams) {
+      doms.headerDom.style.display = "none";
+    }
+  };
+  const doms = {
+    headerDom: document.querySelector(".site-header"),
+    placeholderDome: document.querySelector(".uk-sticky-placeholder"),
+  };
+  const checkList = {
+    checkUrlParams: getQueryVariable("access_environment") && getQueryVariable("access_environment") === "wx_program",
+  };
+  if (!window.WeixinJSBridge || !WeixinJSBridge.invoke) {
+    //首先判断当前是否存在微信桥
+    document.addEventListener(
+      "WeixinJSBridgeReady",
+      function () {
+        //微信桥不存在则监听微信桥准备事件
+        if (window.__wxjs_environment === "miniprogram") {
+          //当微信桥挂在上了之后则判断当前微信环境是否为小程序
+          domManipulation();
+        }
+      },
+      false
+    );
+  }
+}
+
 module.exports = {
   init: function () {
+    checkWxProgram();
     headerMenu();
     // logoHoverSwitchPanel();
   },
