@@ -10031,6 +10031,19 @@ iframe.uk-cover {
 html {
   background: #f2f4f7; }
 
+body.site-wx-program-environment .site-header {
+  display: none; }
+  body.site-wx-program-environment .site-header + .uk-sticky-placeholder {
+    display: none; }
+
+body.site-wx-program-environment .uk-grid-margin {
+  display: none; }
+
+body.site-wx-program-environment .site-footer {
+  margin-top: 12px; }
+  body.site-wx-program-environment .site-footer .mobile-menu-board {
+    display: none !important; }
+
 a:focus {
   outline: none; }
 

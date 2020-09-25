@@ -1,6 +1,23 @@
 html {
   background: $bg-color;
 }
+body.site-wx-program-environment {
+  .site-header {
+    display: none;
+    &+.uk-sticky-placeholder {
+      display: none;
+    }
+  }
+  .uk-grid-margin {
+    display: none;
+  }
+  .site-footer {
+    margin-top: 12px;
+    .mobile-menu-board {
+      display: none !important;
+    }
+  }
+}
 a {
   &:focus {
     outline: none;
