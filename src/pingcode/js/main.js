@@ -46,21 +46,8 @@ function checkWxProgram() {
   const checkList = {
     checkUrlParams: getQueryVariable("access_environment") && getQueryVariable("access_environment") === "wx_program",
   };
-  if (!window.WeixinJSBridge || !WeixinJSBridge.invoke) {
-    //首先判断当前是否存在微信桥
-    document.addEventListener(
-      "WeixinJSBridgeReady",
-      function () {
-        //微信桥不存在则监听微信桥准备事件
-        if (window.__wxjs_environment === "miniprogram") {
-          //当微信桥挂在上了之后则判断当前微信环境是否为小程序
-          if (checkList.checkUrlParams) {
-            document.querySelector('body').className += ' site-wx-program-environment';
-          }
-        }
-      },
-      false
-    );
+  if (/miniProgram/i.test(navigator.userAgent) && checkList.checkUrlParams) {
+    document.querySelector('body').className += ' site-wx-program-environment';
   }
 }
 
