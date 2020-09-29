@@ -16,6 +16,53 @@ This header template is shared across all the pages.
         {{@site.title}}
       </a>
       {{/if}}
+      <div id="logo-switch" tabindex="0" hidefocus="true" class="arrow-down-circle-box" data-v-c03487ca>
+          <a href="javascript:" class="arrow-down-circle">
+              <svg class="svg-icon arrow-down-circle hover-rotate" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.1 5.3"
+                   style="enable-background:new 0 0 10.1 5.3;" xml:space="preserve">
+            <g>
+              <g>
+                <path class="st0-831" d="M0.5,0c0.1,0,0.3,0,0.4,0.1l4,4.1c0.1,0.1,0.2,0.1,0.3,0l4-4.1C9.4,0,9.7,0,9.9,0.1c0.2,0.2,0.2,0.5,0,0.7
+            l-4,4.1c-0.5,0.5-1.3,0.5-1.7,0l-4-4.1C0,0.7,0,0.3,0.1,0.1C0.2,0,0.4,0,0.5,0z" />
+              </g>
+            </g>
+          </svg>
+          </a>
+
+            <ul id="logo-switch-panel" class="logo-nav" data-v-c03487ca>
+                <li class="switch-site-bg" data-v-c03487ca>
+                    <svg class="svg-icon switch-site" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242 224"
+                         style="enable-background:new 0 0 242 224;" xml:space="preserve">
+                <style type="text/css">
+                  .switch-site .st0 {
+                      fill: #FFFFFF;
+                  }
+                </style>
+                        <g>
+                  <path class="st0" d="M236,7.9H128.6l-6-7.2c-0.8-1-2.3-1-3.1,0l-6,7.2H6c-3.3,0-6,2.7-6,6V218c0,3.3,2.7,6,6,6h230c3.3,0,6-2.7,6-6
+        V13.9C242,10.6,239.3,7.9,236,7.9z" />
+                </g>
+              </svg>
+
+                </li>
+                <li data-v-c03487ca>
+                    <a href="https://pingcode.com" target="_blank" data-v-c03487ca>
+                        <img src="/assets/img/pingcode-fill.svg" alt="">
+                        <span>PingCode</span>
+                        <span>智能化研发管理工具</span>
+                    </a>
+                </li>
+                <li data-v-c03487ca>
+                    <a href="https://worktile.com/" target="_blank" data-v-c03487ca>
+                        <img src="/assets/img/worktile-fill.svg" alt="worktile" />
+                        <span>Worktile</span>
+                        <span>通用项目管理和团队协作工具</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="uk-navbar-right">
@@ -51,7 +98,6 @@ This header template is shared across all the pages.
       {{#if @site.navigation}}
       {{navigation}}
       {{/if}}
-
     </ul>
 
   </div>

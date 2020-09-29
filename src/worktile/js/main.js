@@ -3,6 +3,9 @@ function headerMenu() {
     headerMenu: document.querySelector(".header-menu"),
     menuBoard: document.querySelector(".menu-board"),
   };
+  if (!doms.headerMenu) {
+    return (void 0);
+  }
   doms.headerMenu.onclick = function () {
     if (doms.headerMenu.classList.contains("header-menu--show-close")) {
       doms.headerMenu.classList.remove("header-menu--show-close");
@@ -19,6 +22,9 @@ function logoHoverSwitchPanel() {
     logoArrow: document.querySelector("#logo-switch"),
     panel: document.querySelector("#logo-switch-panel"),
   };
+  if (!doms.logoArrow) {
+    return (void 0);
+  }
   doms.logoArrow.onclick = function (e) {
     e.stopPropagation();
     doms.logoArrow.classList.add("show-logo-nav");
