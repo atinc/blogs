@@ -154,6 +154,13 @@ a {
 }
 .wt-footer {
   padding: 50px 0 0;
+  .contact-column {
+    padding-left: 20px;
+  }
+  .footer-wt-logo {
+    display: block;
+    text-decoration: none;
+  }
   .footer_logo {
     flex: initial;
     width: auto;
@@ -178,15 +185,15 @@ a {
     }
     .footer-icon {
       margin-top: 20px;
-      width: 120px;
+      width: 170px;
       & ul {
-        width: 120px;
+        width: 170px;
         display: flex;
         justify-content: space-between;
       }
       & li {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         margin-top: 0px;
         cursor: pointer;
         text-align: center;
@@ -216,6 +223,10 @@ a {
           display: block;
         }
       }
+    }
+    .footer-slogan {
+      color: $gray-500;
+      font-size: 14px;
     }
   }
   .wt-footer-copyright {
@@ -289,7 +300,8 @@ a {
       width: auto;
       margin: 0px auto;
       padding-top: 31px;
-      > p {
+      > p,
+      > p > a {
         font-size: 0.75rem;
         color: $gray-800;
         letter-spacing: 0.45px;

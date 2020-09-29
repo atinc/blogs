@@ -9,71 +9,81 @@ This footer template is shared across all the pages.
       <div class="wt-container">
         <div class="uk-child-width-1-6@m" uk-grid>
           <div>
-            <div>
+            <a class="footer-wt-logo" href="/" target="_self">
               <img class="uk-preserve footer_logo" src="https://cdn.worktile.com/assets/images/next/logo/logo_samll.svg"
                 uk-svg />
-            </div>
+            </a>
           </div>
           <div>
             <h5>产品</h5>
             <ul class="uk-nav">
-              <li><a href="https://worktile.com/agile">Agile</a></li>
-              <li><a href="#">Plan</a></li>
-              <li><a href="https://worktile.com/testhub">Testhub</a></li>
-              <li><a href="https://worktile.com/wiki">Wiki</a></li>
-              <li><a href="https://worktile.com/teams">Teams</a></li>
-              <li><a href="https://worktile.com/client">客户端</a></li>
+              <li><a href='https://pingcode.com/?utm_source=worktile&utm_medium=bn&utm_term=launch&utm_content=pingcode' target="_self">软件开发</a></li>
+              <li><a href='/developer' target="_self">开发者</a></li>
+              <li><a href='https://blog.worktile.com/tag/features' target="_self">更新日志</a></li>
+              <li><a href='https://worktile.com/security' target="_self">安全与信任</a></li>
+              <li><a href="https://apps.worktile.com/templates" target="_self">模板市场</a></li>
+              <li><a href='/client' target="_self">客户端</a></li>
+              <li><a href='/wechatwork' target="_self">企业微信版</a></li>
+              <li><a href='/pricing' target="_self">价格</a></li>
             </ul>
           </div>
           <div>
-            <h5>服务</h5>
+            <h5>解决方案</h5>
             <ul class="uk-nav">
-              <li><a href="https://worktile.com/solution">解决方案</a></li>
-              <li><a href="https://worktile.com/case">客户案例</a></li>
-              <li><a href="//help.worktile.com">帮助中心</a></li>
-              <li><a href="https://worktile.com/videos">视频教程</a></li>
-              <li><a href="https://blog.worktile.com">官方博客</a></li>
+              <li><a href='/solution/project'>项目管理</a></li>
+              <li><a href='/solution/okr'>目标管理</a></li>
+              <li><a href='/scrum'>软件研发管理</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>资源和服务</h5>
+            <ul class="uk-nav">
+              <li><a href="//help.worktile.com" target="_self">帮助中心</a></li>
+              <li><a href='https://blog.worktile.com' target="_self">博客</a></li>
+              <li><a href='/videos' target="_self">视频教程</a></li>
+              <li><a href='/consulting' target="_self">咨询服务</a></li>
             </ul>
           </div>
           <div>
             <h5>公司</h5>
             <ul class="uk-nav">
-              <li><a href="https://worktile.com/about">关于我们</a></li>
-              <li><a href="https://worktile.com/press">媒体报道</a></li>
-              <li><a href="https://worktile.com/contact">联系我们</a></li>
-              <li><a href="https://worktile.com/privacy">隐私声明</a></li>
-              <li><a href="https://worktile.com/terms">服务条款</a></li>
-              <li><a href="https://worktile.com/developer">开发者</a></li>
+              <li><a href='https://jobs.worktile.com/#/'>加入我们</a></li>
+              <li><a href='/about'>投资者关系</a></li>
+              <li><a href='/partner'>合作伙伴</a></li>
             </ul>
           </div>
-          <div>
-            <h5>更多</h5>
-            <ul class="uk-nav">
-              <li><a href="https://worktile.com/partner">合作伙伴</a></li>
-              <!-- <li><a href="/plus">公益计划</a></li> -->
-              <li><a href="https://worktile.com/workshop">Workshop</a></li>
-            </ul>
-          </div>
-          <div>
+          <div class="contact-column">
             <h5>联系客户顾问</h5>
             <ul class="uk-nav">
-              <li><a href="">+86 400 805 6966</a></li>
+              <li><a href="tel:400-805-6966" target="_self">400 805 6966</a></li>
               <li class="footer-icon">
                 <ul>
                   <li class="wechat">
-                    <a href="javascript:;" target="_blank"><i class="wt-icon-wechat"></i></a>
+                    <a href="javascript:;" target="_blank"><img width="100%"
+                      src="https://cdn.worktile.com/assets/images/home/footer/weixin.png?v=<%=locals.config.version%>"
+                      alt="" /></a>
                     <img class="wechat-tip" width="100%"
                       src="https://cdn.worktile.com/assets/images/home/new-weixin.png?v=<%=locals.config.version%>"
                       alt="" />
                   </li>
                   <li>
-                    <a href="http://weibo.com/worktile" target="_blank"><i class="wt-icon-weibo"></i></a>
+                    <a href="https://www.zhihu.com/org/bei-jing-yi-cheng-shi-dai-ke-ji-you-xian-gong-si" target="_blank"><img width="100%"
+                      src="https://cdn.worktile.com/assets/images/home/footer/zhihu.png?v=<%=locals.config.version%>"
+                      alt="" /></a>
                   </li>
                   <li>
-                    <a href="/blog" target="_blank"><i class="wt-icon-rss"></i></a>
+                    <a href="https://weibo.com/worktile" target="_blank"><img width="100%"
+                      src="https://cdn.worktile.com/assets/images/home/footer/weibo.png?v=<%=locals.config.version%>"
+                      alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="https://www.jianshu.com/u/82213c618353" target="_blank"><img width="100%"
+                      src="https://cdn.worktile.com/assets/images/home/footer/jianshu.png?v=<%=locals.config.version%>"
+                      alt="" /></a>
                   </li>
                 </ul>
               </li>
+              <li class="footer-slogan">我们用Worktile创造Worktile</li>
             </ul>
           </div>
         </div>
@@ -94,63 +104,45 @@ This footer template is shared across all the pages.
         <li class="uk-parent wt-footer-menu">
           <a href="#" class="wt-footer-menu-title">产品</a>
           <ul class="uk-nav-sub">
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/agile">Agile</a></li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/pipe">Pipe</a></li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/trace">Trace</a></li>
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/testhub">TestHub</a>
-            </li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/teams">Teams</a></li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/client">客户端</a></li>
+            <li class="wt-footer-menu-item"><a href='https://pingcode.com/?utm_source=worktile&utm_medium=bn&utm_term=launch&utm_content=pingcode'>软件开发</a></li>
+            <li class="wt-footer-menu-item"><a href='/developer'>开发者</a></li>
+            <li class="wt-footer-menu-item"><a href='https://blog.worktile.com/tag/features'>更新日志</a></li>
+            <li class="wt-footer-menu-item"><a href='https://worktile.com/security'>安全与信任</a></li>
+            <li class="wt-footer-menu-item"><a href="https://apps.worktile.com/templates">模板市场</a></li>
+            <li class="wt-footer-menu-item"><a href='/client'>客户端</a></li>
+            <li class="wt-footer-menu-item"><a href='/wechatwork'>企业微信版</a></li>
+            <li class="wt-footer-menu-item"><a href='/pricing'>价格</a></li>
           </ul>
         </li>
         <li class="uk-parent wt-footer-menu">
-          <a href="#" class="wt-footer-menu-title">服务</a>
+          <a href="#" class="wt-footer-menu-title">解决方案</a>
           <ul class="uk-nav-sub">
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/solution">解决方案</a>
-            </li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/case">客户案例</a></li>
-            <li class="wt-footer-menu-item">
-              <a href="//help.worktile.com">帮助中心</a>
-            </li>
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/videos">视频教程</a>
-            </li>
+            <li class="wt-footer-menu-item"><a href='/solution/project'>项目管理</a></li>
+            <li class="wt-footer-menu-item"><a href='/solution/okr'>目标管理</a></li>
+            <li class="wt-footer-menu-item"><a href='/scrum'>软件研发管理</a></li>
+          </ul>
+        </li>
+        <li class="uk-parent wt-footer-menu">
+          <a href="#" class="wt-footer-menu-title">资源和服务</a>
+          <ul class="uk-nav-sub">
+            <li class="wt-footer-menu-item"><a href="//help.worktile.com">帮助中心</a></li>
+            <li class="wt-footer-menu-item"><a href='https://blog.worktile.com'>博客</a></li>
+            <li class="wt-footer-menu-item"><a href='/videos'>视频教程</a></li>
+            <li class="wt-footer-menu-item"><a href='/consulting'>咨询服务</a></li>
           </ul>
         </li>
         <li class="uk-parent wt-footer-menu">
           <a href="#" class="wt-footer-menu-title">公司</a>
           <ul class="uk-nav-sub">
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/about">关于我们</a></li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/press">媒体报道</a></li>
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/contact">联系我们</a>
-            </li>
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/privacy">隐私声明</a>
-            </li>
-            <li class="wt-footer-menu-item"><a href="https://worktile.com/terms">服务条款</a></li>
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/developer">加入我们</a>
-            </li>
-          </ul>
-        </li>
-        <li class="uk-parent wt-footer-menu">
-          <a href="#" class="wt-footer-menu-title">更多</a>
-          <ul class="uk-nav-sub">
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/partner">合作伙伴</a>
-            </li>
-            <li class="wt-footer-menu-item">
-              <a href="https://worktile.com/workshop">Workshop</a>
-            </li>
+            <li class="wt-footer-menu-item"><a href='https://jobs.worktile.com/#/'>加入我们</a></li>
+            <li class="wt-footer-menu-item"><a href='/about'>投资者关系</a></li>
+            <li class="wt-footer-menu-item"><a href='/partner'>合作伙伴</a></li>
           </ul>
         </li>
       </ul>
       <div class="wt-footer-info">
         <p>联系客户顾问</p>
-        <p>+86 400 805 6966</p>
+        <p><a href="tel:400-805-6966" target="_self">400 805 6966</a></p>
         <span>京公网安备11010802012357号</span>
       </div>
     </div>
