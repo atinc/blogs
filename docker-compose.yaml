@@ -2,7 +2,7 @@ version: "3"
 
 services:
   ghostyxb:
-    image: ghost
+    image: ghost:3.31.3
     container_name: wt-blog-ghost
     volumes:
       - ./content:/var/lib/ghost/content
