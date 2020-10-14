@@ -2,12 +2,12 @@
   "url": "http://localhost:2368/",
   "server": {
     "port": 2368,
-    "host": "127.0.0.1"
+    "host": "0.0.0.0"
   },
   "database": {
     "client": "sqlite3",
     "connection": {
-      "filename": "/Users/quanquan/Documents/worktile/wt-blog/content/data/ghost-local.db"
+      "filename": "/var/lib/ghost/content/data/ghost-local.db"
     }
   },
   "mail": {
@@ -21,6 +21,6 @@
   },
   "process": "local",
   "paths": {
-    "contentPath": "/Users/quanquan/Documents/worktile/wt-blog/content"
+    "contentPath": "/var/lib/ghost/content"
   }
 }
