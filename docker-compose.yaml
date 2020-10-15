@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  wt-blog-ghost:
+    image: ghost:3.31.3
+    container_name: wt-blog-ghost
+    volumes:
+      - ./lib/ghost:/var/lib/ghost/content
+      - ./config.development.json:/var/lib/ghost/config.development.json
+    ports:
+      - 6100:2368
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - LANG=C.UTF-8
+      - NODE_ENV=development
+    networks:
+      - wt-blog-ghost
+
+networks:
+  wt-blog-ghost:

@@ -1,8 +1,0 @@
-{
-  "active-version": "3.31.3",
-  "cli-version": "1.14.1",
-  "name": "dev",
-  "previous-version": "3.12.1",
-  "node-version": "10.21.0",
-  "running": "development"
-}
