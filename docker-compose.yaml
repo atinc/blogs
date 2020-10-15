@@ -5,10 +5,10 @@ services:
     image: ghost:3.31.3
     container_name: wt-blog-ghost
     volumes:
-      - ./content:/var/lib/ghost/content
+      - ./lib/ghost:/var/lib/ghost/content
       - ./config.development.json:/var/lib/ghost/config.development.json
     ports:
-      - 8123:2368
+      - 8100:2368
     restart: always
     environment:
       - TZ=Asia/Shanghai
