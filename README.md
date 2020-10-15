@@ -52,7 +52,7 @@ cd wt-blog && npm install
 
 ## 开发地址
 
-http://localhost:8100/
+http://localhost:6100/
 
 
 

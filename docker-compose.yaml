@@ -8,7 +8,7 @@ services:
       - ./lib/ghost:/var/lib/ghost/content
       - ./config.development.json:/var/lib/ghost/config.development.json
     ports:
-      - 8100:2368
+      - 6100:2368
     restart: always
     environment:
       - TZ=Asia/Shanghai
