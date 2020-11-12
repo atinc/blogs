@@ -3,15 +3,17 @@ function headerMenu() {
     headerMenu: document.querySelector(".header-menu"),
     menuBoard: document.querySelector(".menu-board"),
   };
-  doms.headerMenu.onclick = function () {
-    if (doms.headerMenu.classList.contains("header-menu--show-close")) {
-      doms.headerMenu.classList.remove("header-menu--show-close");
-      doms.menuBoard.classList.remove("menu-board--show");
-    } else {
-      doms.headerMenu.classList.add("header-menu--show-close");
-      doms.menuBoard.classList.add("menu-board--show");
-    }
-  };
+  if (doms.headerMenu) {
+    doms.headerMenu.onclick = function () {
+      if (doms.headerMenu.classList.contains("header-menu--show-close")) {
+        doms.headerMenu.classList.remove("header-menu--show-close");
+        doms.menuBoard.classList.remove("menu-board--show");
+      } else {
+        doms.headerMenu.classList.add("header-menu--show-close");
+        doms.menuBoard.classList.add("menu-board--show");
+      }
+    };
+  }
 }
 
 function logoHoverSwitchPanel() {
