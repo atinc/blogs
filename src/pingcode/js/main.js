@@ -59,11 +59,9 @@ function getShareConfig() {
   jquery.ajax({
     method: "GET",
     url: HOST + '/api/siren/wechat/signature',
-    data: { url: encodeURIComponent(location.href) }
+    data: { url: location.href }
   })
     .then(data => {
-      console.log('response data:>> ', data);
-      console.log('wx.config :>> ', wx.config);
       const { nonceStr, signature, timestamp } = data.data.value;
       wx.config({
         debug: false,
@@ -73,28 +71,25 @@ function getShareConfig() {
         signature,
         jsApiList: ['updateAppMessageShareData', 'updateTimelineShareData'],
       });
-    })
-    .done(function (msg) {
-      console.log('msg :>> ', msg);
       const title = document.querySelector('meta[property="og:title"]').getAttribute('content') || 'pingcode-blog分享';
       const desc = document.querySelector('meta[property="og:description"]').getAttribute('content') || 'pingcode-desc描述';
-      const imgUrl = location.origin + '/favicon.ico';
+      const imgUrl = location.origin + '/assets/img/pingcode.png';
       wx.ready(function () {
         wx.updateAppMessageShareData({
           title, // 分享标题
           desc, // 分享描述
+          link: location.href,
           imgUrl, // 分享图标
           success: function () {
             // 设置成功
-            console.log(' updateAppMessageShareData 成功');
           }
         })
         wx.updateTimelineShareData({
           title, // 分享标题
+          link: location.href,
           imgUrl, // 分享图标
           success: function () {
             // 设置成功
-            console.log(' updateTimelineShareData 成功');
           }
         })
       });
@@ -102,7 +97,7 @@ function getShareConfig() {
         // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
         console.error(res);
       });
-    });
+    })
 }
 
 module.exports = {
