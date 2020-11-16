@@ -73,7 +73,7 @@ function getShareConfig() {
       });
       const title = document.querySelector('meta[property="og:title"]').getAttribute('content') || 'pingcode-blog分享';
       const desc = document.querySelector('meta[property="og:description"]').getAttribute('content') || 'pingcode-desc描述';
-      const imgUrl = location.origin + '/assets/img/pingcode.png';
+      const imgUrl = location.origin + '/assets/img/pingcode-fill.png';
       wx.ready(function () {
         wx.updateAppMessageShareData({
           title, // 分享标题
