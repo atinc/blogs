@@ -37,13 +37,12 @@ module.exports = (env) => {
                     include: [path.resolve(__dirname, CONFIG.srcRoot)],
                 },
                 {
-                    test: /\.scss$/,
+                    test: /\.(sc|sa|c)ss$/,
                     use: ExtractTextPlugin.extract({
                         fallback: "style-loader",
                         //如果需要，可以在 sass-loader 之前将 resolve-url-loader 链接进来
                         use: ["css-loader", "sass-loader"],
-                    }),
-                    include: [path.resolve(__dirname, CONFIG.srcRoot)],
+                    })
                 },
             ],
         },

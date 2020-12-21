@@ -8,4 +8,7 @@ node_modules
 logs
 .DS_Store
 built
+.idea
+.history
+casper
 lib/ghost
