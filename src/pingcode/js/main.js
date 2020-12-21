@@ -1,3 +1,7 @@
+const jquery = require('jquery');
+const BLOG_SHARE_APP_ID = 'wxedc101aec3d70448';
+const HOST = location.hostname === 'localhost' ? 'http://pingcode.live' : 'https://pingcode.com';
+
 function headerMenu() {
   const doms = {
     headerMenu: document.querySelector(".header-menu"),
@@ -53,8 +57,54 @@ function checkWxProgram() {
   }
 }
 
+function getShareConfig() {
+  jquery.ajax({
+    method: "GET",
+    url: HOST + '/api/siren/wechat/signature',
+    data: { url: location.href }
+  })
+    .then(data => {
+      const { nonceStr, signature, timestamp } = data.data.value;
+      wx.config({
+        debug: false,
+        appId: BLOG_SHARE_APP_ID,
+        timestamp,
+        nonceStr,
+        signature,
+        jsApiList: ['updateAppMessageShareData', 'updateTimelineShareData'],
+      });
+      const title = document.querySelector('meta[property="og:title"]').getAttribute('content') || 'pingcode-blog分享';
+      const desc = document.querySelector('meta[property="og:description"]').getAttribute('content') || 'pingcode-desc描述';
+      const imgUrl = location.origin + '/assets/img/pingcode-fill.png';
+      wx.ready(function () {
+        wx.updateAppMessageShareData({
+          title, // 分享标题
+          desc, // 分享描述
+          link: location.href,
+          imgUrl, // 分享图标
+          success: function () {
+            // 设置成功
+          }
+        })
+        wx.updateTimelineShareData({
+          title, // 分享标题
+          link: location.href,
+          imgUrl, // 分享图标
+          success: function () {
+            // 设置成功
+          }
+        })
+      });
+      wx.error(function (res) {
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+        console.error(res);
+      });
+    })
+}
+
 module.exports = {
   init: function () {
+    getShareConfig();
     checkWxProgram();
     headerMenu();
     // logoHoverSwitchPanel();
