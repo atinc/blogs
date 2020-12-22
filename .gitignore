@@ -1,7 +1,6 @@
 versions
 current
 .vscode
-config.development.json
 .ghost-cli
 .ghostpid
 node_modules
@@ -11,4 +10,5 @@ built
 .idea
 .history
 casper
-lib/ghost
+lib/ghost/themes/
+lib/ghost/logs/
