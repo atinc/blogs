@@ -50,6 +50,15 @@ cd wt-blog && npm install
 
 
 
+4. @atinc/dione-worktile
+
+   ```bash
+   npm install @atinc/dione-worktile --registry=https://npm.pkg.github.com/
+   npm install @atinc/dione-pingcode --registry=https://npm.pkg.github.com/
+   ```
+
+
+
 ## 开发地址
 
 http://localhost:6100/
