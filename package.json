@@ -14,11 +14,11 @@
     "compress:wt": "node compress-themes wt",
     "rename-header:wt": "mv ./src/worktile/pages/partials/header.html ./src/worktile/pages/partials/header.hbs",
     "rename-footer:wt": "mv ./src/worktile/pages/partials/footer.html ./src/worktile/pages/partials/footer.hbs",
-    "copy:wt": "cpx './node_modules/@atinc/dione-worktile/*.html' './src/worktile/pages/partials/'",
+    "copy:wt": "cpx \"./node_modules/@atinc/dione-worktile/*.html\" \"./src/worktile/pages/partials/\"",
     "dione:wt": "npm run copy:wt && npm run rename-header:wt && npm run rename-footer:wt",
     "rename-header:pc": "mv ./src/pingcode/pages/partials/header.html ./src/pingcode/pages/partials/header.hbs",
     "rename-footer:pc": "mv ./src/pingcode/pages/partials/footer.html ./src/pingcode/pages/partials/footer.hbs",
-    "copy:pc": "cpx './node_modules/@atinc/dione-pingcode/*.html' './src/pingcode/pages/partials/'",
+    "copy:pc": "cpx \"./node_modules/@atinc/dione-pingcode/*.html\" \"./src/pingcode/pages/partials/\"",
     "dione:pc": "npm run copy:pc && npm run rename-header:pc && npm run rename-footer:pc"
   },
   "keywords": [],
