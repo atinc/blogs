@@ -8,6 +8,8 @@ logs
 .DS_Store
 built
 .idea
+package-lock.json
+yarn.lock
 .history
 casper
 lib/ghost/themes/

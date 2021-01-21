@@ -1,3 +1,5 @@
+import dioneWorktile from "@atinc/dione-worktile";
+
 function headerMenu() {
   const doms = {
     headerMenu: document.querySelector(".header-menu"),
@@ -36,9 +38,8 @@ function logoHoverSwitchPanel() {
   };
 }
 
-module.exports = {
-  init: function () {
+export const init = () => {
     headerMenu();
     logoHoverSwitchPanel();
-  },
-};
+    return dioneWorktile;
+}
