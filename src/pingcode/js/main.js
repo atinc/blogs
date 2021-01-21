@@ -1,4 +1,6 @@
-const jquery = require('jquery');
+import dionePingcode from '@atinc/dione-pingcode';
+import jquery from 'jquery';
+
 const BLOG_SHARE_APP_ID = 'wxedc101aec3d70448';
 const HOST = location.hostname === 'localhost' ? 'http://pingcode.live' : 'https://pingcode.com';
 
@@ -102,11 +104,9 @@ function getShareConfig() {
     })
 }
 
-module.exports = {
-  init: function () {
-    getShareConfig();
-    checkWxProgram();
-    headerMenu();
-    // logoHoverSwitchPanel();
-  },
+export const init = () => {
+  getShareConfig();
+  checkWxProgram();
+  headerMenu();
+  return dionePingcode;
 };

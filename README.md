@@ -54,6 +54,7 @@ cd wt-blog && npm install
    ```
 
    npm run dione:wt
+   npm run dione:pc
 
 ## 开发地址
 
