@@ -2,8 +2,6 @@
 
 **blog网站前端代码**
 
-
-
 ## 开发流程
 
 > 所需的前置环境，`git`、`node.js（>=8.9.0）`（建议使用`nvm`管理node版本）、`docker`&`docker-compose`（建议去docker官网直接下载`Docker Desktop`）
@@ -48,22 +46,18 @@ cd wt-blog && npm install
    npm run compress:wt
    ```
 
-
-
-4. @atinc/dione-worktile
+4. 更新 @atinc/dione-xxxxxx
 
    ```bash
-   npm install @atinc/dione-worktile --registry=https://npm.pkg.github.com/
-   npm install @atinc/dione-pingcode --registry=https://npm.pkg.github.com/
+   npm install -D @atinc/dione-worktile --registry=https://npm.pkg.github.com/
+   npm install -D @atinc/dione-pingcode --registry=https://npm.pkg.github.com/
    ```
 
-
+   npm run dione:wt
 
 ## 开发地址
 
 http://localhost:6100/
-
-
 
 ## 用户名和密码
 
