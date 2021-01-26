@@ -8,7 +8,8 @@ const dirName = args ? args === 'pc' ? 'pingcode' : 'worktile' : 'pingcode';
 const builtPath = path.join(__dirname, 'built');
 const getDate = () => {
     const currentDate = new Date();
-    return `${currentDate.getFullYear()}${currentDate.getMonth() + 1}${currentDate.getDate()}`;
+    const currentMonth = currentDate.getMonth() + 1;
+    return `${currentDate.getFullYear()}${currentMonth < 10 ? `0${currentMonth}` : currentMonth}${currentDate.getDate()}`;
 };
 const zipName = `built/${dirName}_${getDate()}.zip`;
 
