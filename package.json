@@ -12,6 +12,7 @@
     "docker-init": "docker-compose up",
     "compress:pc": "node compress-themes pc",
     "compress:wt": "node compress-themes wt",
+    "compress": "npm run compress:wt && npm run compress:pc",
     "rename-header:wt": "mv ./src/worktile/pages/partials/header.html ./src/worktile/pages/partials/header.hbs",
     "rename-footer:wt": "mv ./src/worktile/pages/partials/footer.html ./src/worktile/pages/partials/footer.hbs",
     "copy:wt": "cpx \"./node_modules/@atinc/dione-worktile/*.html\" \"./src/worktile/pages/partials/\"",

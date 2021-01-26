@@ -14,7 +14,7 @@
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" type="text/css" href="{{asset "app.css"}}" media="screen" />
 
-  {{!-- This #block helper will pull data from the hero partial 
+  {{!-- This #block helper will pull data from the hero partial
     to inject styles of the hero image to make it responsive --}}
   {{{block "herobackground"}}}
 
@@ -44,6 +44,29 @@
 
   {{!-- The footer --}}
   {{> footer}}
+
+  <div class="sobot-custom-btn">
+      <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTIgNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjYiIGN5PSIyNiIgZmlsbD0iIzM0OGZlNCIgcj0iMjYiLz48cGF0aCBkPSJtMTIuNDM2NyAyNC45ODM5YzAtNi43OTgxIDYuMDg0Mi0xMi4zMzEgMTMuNTYzMy0xMi4zMzFzMTMuNTYzMyA1LjUzMTQgMTMuNTYzMyAxMi4zMzFhMTEuODk0OCAxMS44OTQ4IDAgMCAxIC01LjA0NjkgOS41ODYxIDEuMjE2OSAxLjIxNjkgMCAwIDAgLS40OTc1Ljk4MjF2My43OTQ5bC0zLjc2MDYtMi4yODI4YTEuMTk5IDEuMTk5IDAgMCAwIC0uOTA3Mi0uMTQ0N2MtOC45NjM3IDIuMDY4Mi0xNi45MTQ0LTQuMTQ5NS0xNi45MTQ0LTExLjkzNTZ6IiBmaWxsPSIjZmZmIi8+PGcgZmlsbD0iIzM0OGZlNCI+PHBhdGggZD0ibTMyLjg0ODYgMjYuNzQ4NGExLjY2NjggMS42NjY4IDAgMSAxIDEuNjA0OC0xLjY2NTcgMS42NjgxIDEuNjY4MSAwIDAgMSAtMS42MDQ4IDEuNjY1N3oiLz48cGF0aCBkPSJtMjQuNjcgMjUuMDgxNmExLjY2NTYgMS42NjU2IDAgMSAwIDEuNjY1Ni0xLjY2NTYgMS42NjY4IDEuNjY2OCAwIDAgMCAtMS42NjU2IDEuNjY1NnoiLz48cGF0aCBkPSJtMTguMTg4NCAyNS4wODE2YTEuNjY1NyAxLjY2NTcgMCAxIDAgMS42NjU3LTEuNjY1NiAxLjY2NjUgMS42NjY1IDAgMCAwIC0xLjY2NTcgMS42NjU2eiIvPjwvZz48L3N2Zz4=" />
+  </div>
+
+  <script>
+      (function (w, d, e, x) {
+          w[e] = function () {
+              w.cbk = w.cbk || [];
+              w.cbk.push(arguments);
+          };
+          x = d.createElement('script');
+          x.async = true;
+          x.id = 'zhichiScript';
+          x.className = 'sobot-custom-btn';
+          x.src =
+              'https://www.sobot.com/chat/frame/v2/entrance.js?sysnum=b01b7974722c472e9e5af65207799681&channelid=3';
+          d.body.appendChild(x);
+      })(window, document, 'zc');
+      zc('config', {
+          custom: true
+      });
+  </script>
 
   {{!-- Common scripts shared between pages --}}
   <script defer src="{{asset "app.js"}}"></script>
