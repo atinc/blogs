@@ -6,7 +6,6 @@
         height: 25px;
       }
     }
-    
   }
 
   .wt-headlines-img{
@@ -21,6 +20,12 @@
   .uk-card-body{
     padding: 20px;
   }
+  .wt-loop .item .uk-card-body {
+    height: auto;
+    > a > p {
+      max-height: unset;
+    }
+  }
   .wt-content-post{
     padding-top: 0px;
     .uk-article-title{
@@ -28,5 +33,4 @@
       line-height: 1.4;
     }
   }
-  
 }
