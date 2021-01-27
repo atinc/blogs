@@ -120,6 +120,8 @@ a {
           font-size: $fs-14;
           color: $gray-600;
           margin: 0;
+          max-height: 100px;
+          overflow: hidden;
         }
         &:hover {
           text-decoration: none;
