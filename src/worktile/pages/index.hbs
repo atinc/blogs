@@ -52,7 +52,7 @@ into the {body} of the default.hbs template --}}
 
 
   <div class="wt-card-tag uk-card uk-card-default uk-card-body uk-margin">
-    <ul class="wt-tag-nav uk-flex uk-flex-between">
+    <ul class="wt-tag-nav uk-flex">
       <li class="active"><a href="#">全部</a></li>
       {{#get 'tags' limit='13' as |tags|}}
       {{#foreach tags as |my_tag|}}

@@ -20,6 +20,25 @@ a {
 }
 .wt-main {
   margin-top: 20px;
+  .uk-article-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .wt-title-to-home {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      > span {
+        margin-right: 6px;
+        font-size: 0.875rem;
+      }
+      > svg {
+        margin-right: 6px;
+        width: 16px;
+      }
+    }
+  }
 }
 .wt-footer-public {
   background: $white;
