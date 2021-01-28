@@ -21,21 +21,33 @@ a {
 .wt-main {
   margin-top: 20px;
   .uk-article-title {
+    margin-top: 30px;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .wt-article-title {
+      font-weight: 600;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: center;
+    }
     .wt-title-to-home {
-      margin-bottom: 6px;
+      margin: 32px 0 20px;
+      box-sizing: border-box;
+      height: 22px;
+      text-decoration: none;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
       > span {
-        margin-right: 6px;
-        font-size: 0.875rem;
+        font-size: 1rem;
+        color: $tips-back-color;
       }
       > svg {
-        margin-right: 6px;
-        width: 16px;
+        margin-right: 3px;
+        height: 15px;
       }
     }
   }

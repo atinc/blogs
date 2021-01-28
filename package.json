@@ -20,14 +20,15 @@
     "rename-header:pc": "mv ./src/pingcode/pages/partials/header.html ./src/pingcode/pages/partials/header.hbs",
     "rename-footer:pc": "mv ./src/pingcode/pages/partials/footer.html ./src/pingcode/pages/partials/footer.hbs",
     "copy:pc": "cpx \"./node_modules/@atinc/dione-pingcode/*.html\" \"./src/pingcode/pages/partials/\"",
-    "dione:pc": "npm run copy:pc && npm run rename-header:pc && npm run rename-footer:pc"
+    "dione:pc": "npm run copy:pc && npm run rename-header:pc && npm run rename-footer:pc",
+    "dione": "npm run dione:pc && npm run dione:wt"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@atinc/dione-worktile": "^1.0.10",
-    "@atinc/dione-pingcode": "^1.0.10",
+    "@atinc/dione-worktile": "^1.0.12",
+    "@atinc/dione-pingcode": "^1.0.12",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@worktile/pc-site-styx": "latest",
     "babel-loader": "^8.0.0-beta.0",
