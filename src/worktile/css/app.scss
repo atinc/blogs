@@ -360,6 +360,7 @@ a {
 }
 .wt-content-post {
   padding-top: 30px;
+  padding-bottom: 60px;
   .wt-content {
     .uk-card-body {
       padding: 30px;
@@ -377,6 +378,9 @@ a {
   }
 }
 .sidebar-box {
+  > .uk-sticky-fixed {
+    z-index: initial;
+  }
   .item {
     .uk-card-title {
       font-size: 16px;

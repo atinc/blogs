@@ -382,6 +382,9 @@ a {
   }
 }
 .sidebar-box {
+  > .uk-sticky-fixed {
+    z-index: initial;
+  }
   .item {
     .uk-card-title {
       font-size: 16px;
